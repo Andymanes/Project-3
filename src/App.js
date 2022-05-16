@@ -7,11 +7,16 @@ import GamesList from './pages/GamesList';
 
 
 function App() {
-  const [games, setGames] = useState(null)
+  const [games, setGames] = useState([])
+  const config = {
+    headers: {
+      'Access-Control-Allow-Origin': '*'
+    },
+    mode:'cors'
 
+  }
   function getGames() {
-    fetch('https://www.giantbomb.com/api/games/?format=json&api_key=4475e47564e8bd765fc769b0d2298b654984a973&filter=platforms:9')
-    console.log(games)
+    fetch('https://www.giantbomb.com/api/games/?format=json&api_key=4475e47564e8bd765fc769b0d2298b654984a973&filter=platforms:9', config)
     .then((res) => res.json())
     .then((res) => setGames(res.results))
   }
