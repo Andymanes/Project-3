@@ -1,8 +1,8 @@
 // import './App.css';
-// import { Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import React from 'react'
 import { useState, useEffect } from 'react'
-// import GamesList from './pages/GamesList';
+import BooksList from './pages/BookList'
 
 
 
@@ -24,19 +24,22 @@ function App() {
   },[])
 console.log({books})
   return(
-    <div className='App'>
+    <Routes>
+      <Route exact path='/' element={<BooksList books={books} />} />
+    </Routes>
+    // <div className='App'>
 
-        {books ? books.map((book, idx) => (
-          <div key={idx}>
-            <h2>{book.volumeInfo?.title}</h2>
+    //     {books ? books.map((book, idx) => (
+    //       <div key={idx}>
+    //         <h2>{book.volumeInfo?.title}</h2>
 
-          </div>
+    //       </div>
             
 
-        )) : <p>Loading...</p>}
+    //     )) : <p>Loading...</p>}
         
 
-    </div>
+    // </div>
   )
 }
 
