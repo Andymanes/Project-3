@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-function BookList(props) {
+function BooksList(props) {
     console.log(props.books)
 
     return (

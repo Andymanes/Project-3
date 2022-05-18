@@ -2,7 +2,8 @@
 import { Routes, Route } from 'react-router-dom'
 import React from 'react'
 import { useState, useEffect } from 'react'
-import BooksList from './pages/BookList'
+import BooksList from './pages/BooksList'
+import BookPage from './pages/Book'
 
 
 
