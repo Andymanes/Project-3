@@ -4,6 +4,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import BooksList from './pages/BooksList'
 import BookPage from './pages/Book'
+import Header from './components/Header'
 
 
 
@@ -12,14 +13,14 @@ function App() {
   let [books, getBooks] = useState([])
 
   useEffect(() => {
-    console.log('useEffect happned')
+    // console.log('useEffect happned')
     fetch('https://www.googleapis.com/books/v1/volumes?q=subject:fantasy&key=AIzaSyBTjTd2shcZdt0Zac3pxR_RV72Jj7QxWqw')
     .then(response => {
-      console.log('Here is response:', response)
+      // console.log('Here is response:', response)
       return response.json()
     })
     .then(data => {
-      console.log('Here is data:', data)
+      // console.log('Here is data:', data)
       getBooks(data.items)
     })
   },[])
@@ -28,19 +29,7 @@ console.log({books})
     <Routes>
       <Route exact path='/' element={<BooksList books={books} />} />
     </Routes>
-    // <div className='App'>
-
-    //     {books ? books.map((book, idx) => (
-    //       <div key={idx}>
-    //         <h2>{book.volumeInfo?.title}</h2>
-
-    //       </div>
-            
-
-    //     )) : <p>Loading...</p>}
-        
-
-    // </div>
+    
   )
 }
 

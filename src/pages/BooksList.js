@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom'
 
 function BooksList(props) {
-    console.log(props.books)
+    // console.log(props.books)
 
     return (
         <>
             {props.books ? props.books.map((book, idx) => (
                 <div key={idx}>
-                    <Link to={`/${idx}`} >
+                    <Link to={`/${book.selfLink}&key=AIzaSyBTjTd2shcZdt0Zac3pxR_RV72Jj7QxWqw`} >
                         <h2>{book.volumeInfo?.title}</h2>
                     </Link>
                      
