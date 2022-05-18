@@ -1,16 +1,35 @@
 import { useParams } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
-function BookPage (props) {
-    let { index } = useParams()
-    console.log(index)
-    let book = props.books[index]
+
+function Book (props) {
+    let { id } = useParams()
+    let [book, getBook] = useState({})
+
+    useEffect(() => {
+        // fetch data from api using the id params to tell it which book 
+        // specifically to query
+        fetch(`https://www.googleapis.com/books/v1/volumes/${id}`)
+        .then(response => {
+            console.log('Response:', response)
+            return response.json()
+        })
+        .then(data => {
+            console.log('Data:', data)
+            getBook(data)
+        })
+    },[])
+    console.log({book})
+    // book IS console.logging with all relevant data
+    // wanting to display properties of the book object on page
     return (
         <>
-            <h2>{book.volumeInfo.title}</h2>
-            <h2>{book.volumeInfo.authors}</h2>
-            <h2>{book.volumeInfo.publishedDate}</h2>
+            
+                <div >
+                    <h2>{book.volumeInfo?.title}</h2> 
+                </div>
         </>
     )
 }
 
-export default BookPage
+export default Book
