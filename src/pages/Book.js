@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import Header from '../components/Header'
 
 
 function Book (props) {
@@ -24,14 +25,15 @@ function Book (props) {
     // wanting to display properties of the book object on page
     return (
         <>
-            
-                <div className='book'>
-                    <h1 className='title'>{book.volumeInfo?.title}</h1>  
-                    <img src={book.volumeInfo?.imageLinks.thumbnail} />
-                    <h2 className='author'>{book.volumeInfo?.authors}</h2> 
-                    <h2 className='categories'>{book.volumeInfo?.categories}</h2> 
-                    <h2 className='description'>{book.volumeInfo?.description}</h2> 
-                </div>
+            <Header></Header>
+            <div className='book'>
+                <h1 className='title'>{book.volumeInfo?.title}</h1>  
+                <img className='image' src={book.volumeInfo?.imageLinks.thumbnail} />
+                <h2 className='author'>{book.volumeInfo?.authors}</h2> 
+                {/* <h2 className='categories'>{book.volumeInfo?.categories}</h2>  */}
+                <h2 className='categories'>Published: {book.volumeInfo?.publishedDate}</h2> 
+                <h2 className='description'>{book.volumeInfo?.description}</h2> 
+            </div>
         </>
     )
 }

@@ -28,7 +28,6 @@ function App() {
 console.log({books})
   return(
     <Routes>
-      
       <Route exact path='/' element={<BooksList books={books} />} />
       <Route exact path='/:id' element={<Book/>} ></Route>
     </Routes>
