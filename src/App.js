@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     // console.log('useEffect happned')
-    fetch('https://www.googleapis.com/books/v1/volumes?q=subject:fantasy')
+    fetch('https://www.googleapis.com/books/v1/volumes?q=subject:fantasy&maxResults=40')
     .then(response => {
       // console.log('Here is response:', response)
       return response.json()
