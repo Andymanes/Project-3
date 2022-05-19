@@ -8,13 +8,12 @@ body{
 }
 
 .bookList{
-  background-color: rgb(229, 243, 243);
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  border: solid yellow;
-  margin: 5px
+  margin: 5px;
+  margin-top: 15px;
 }
 
 .eachBook{
@@ -25,11 +24,13 @@ body{
   width: 23%;
   flex-direction: column;
   height: 100%;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  
   justify-content: center;
 }
 
 .eachBookImg{
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 3px;
   height: 300px;
   width: auto;
   max-width: 100vw;
@@ -38,6 +39,7 @@ body{
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  padding: 5px;
 }
 
 .eachBookTitle{
@@ -45,6 +47,8 @@ body{
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 10px;
+  font-size: 20px;
 }
 
 .book{
@@ -52,20 +56,45 @@ body{
   color: rgb(35, 39, 39);
   border-radius: 5px;
   padding: 3px;
-  display: flexbox;
+  display: flex;
+  flex-direction: row;
+  border: solid grey;
+  justify-content: space-around;
+}
+
+.firstInfo{
+  width: 30%;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+.secondInfo{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;;
 }
 
 .title{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
-  border-width: 1px;
-  border-color: solid red; 
+  font-size: 30px;
   display: flex;
   justify-content: center;
+  margin-bottom: 5px;
+}
+
+.image{
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
 .author{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 30px;
 }
 
 .description{
@@ -73,14 +102,14 @@ body{
   font-size: 17px;
 }
 
-.image{
-  height: auto;
-  width: auto;
-  min-height: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 .nav{
   font-style: normal;
+  display: flex;
+  width: 100%;
+  height: 5vh;
+  justify-content: center;
+  background-color: aliceblue;
+  margin-bottom: 5px;
+  font-size: 25px;
+  border-radius: 3px;
 }

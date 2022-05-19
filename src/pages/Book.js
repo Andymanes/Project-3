@@ -27,12 +27,15 @@ function Book (props) {
         <>
             <Header></Header>
             <div className='book'>
-                <h1 className='title'>{book.volumeInfo?.title}</h1>  
-                <img className='image' src={book.volumeInfo?.imageLinks.thumbnail} />
-                <h2 className='author'>{book.volumeInfo?.authors}</h2> 
-                {/* <h2 className='categories'>{book.volumeInfo?.categories}</h2>  */}
-                <h2 className='categories'>Published: {book.volumeInfo?.publishedDate}</h2> 
-                <h2 className='description'>{book.volumeInfo?.description}</h2> 
+                <div className='firstInfo'>
+                    <div className='title'>{book.volumeInfo?.title}</div>  
+                    <img className='image' src={book.volumeInfo?.imageLinks.thumbnail} />
+                </div>
+                <div className='secondInfo'>
+                    <div className='author'>{book.volumeInfo?.authors}</div> 
+                    <div className='published'>Published: {book.volumeInfo?.publishedDate}</div> 
+                    <div className='description'>{book.volumeInfo?.description}</div> 
+                </div>
             </div>
         </>
     )
