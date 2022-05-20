@@ -30,6 +30,7 @@ console.log({books})
     <Routes>
       <Route exact path='/' element={<BooksList books={books} />} />
       <Route exact path='/:id' element={<Book/>} ></Route>
+      {/* <Route exact path='/author/:id' element={} */}
     </Routes>
     
   )

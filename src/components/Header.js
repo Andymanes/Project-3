@@ -6,7 +6,7 @@ function Header() {
     return (
         <nav className="nav" >
             <Link to='/' >
-                <div>Back to Library</div>
+                <div>Library</div>
             </Link>
         </nav>
     )

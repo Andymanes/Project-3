@@ -6,6 +6,7 @@ function BooksList(props) {
 
     return (
         <>
+            <Header></Header>
             <div className='bookList'>
                 {props.books ? props.books.map((book, idx) => (
                     <div key={idx} className='eachBook'>

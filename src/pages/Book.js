@@ -23,6 +23,7 @@ function Book (props) {
     console.log({book})
     // book IS console.logging with all relevant data
     // wanting to display properties of the book object on page
+    
     return (
         <>
             <Header></Header>
@@ -33,8 +34,10 @@ function Book (props) {
                 </div>
                 <div className='secondInfo'>
                     <div className='author'>{book.volumeInfo?.authors}</div> 
+                    {/* <div className='author'>{book.volumeInfo?.description}</div>  */}
                     <div className='published'>Published: {book.volumeInfo?.publishedDate}</div> 
-                    <div className='description'>{book.volumeInfo?.description}</div> 
+                    <div className='description' dangerouslySetInnerHTML={{__html: book.volumeInfo?.description}} />
+                    {/* <div className='description' dangerouslySetInnerHTML={{__html: description}} /> */}
                 </div>
             </div>
         </>
