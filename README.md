@@ -2,7 +2,7 @@ Google Book Search
 
 Description:
 
-React-based Google Books search app that displays book information. Users can select a specific book to view more details about it (author, description, and published date).
+React-based Google Books search app that displays book information. Users can select a specific book to view more details (author, description, and published date).
 
 
 Deployment:
